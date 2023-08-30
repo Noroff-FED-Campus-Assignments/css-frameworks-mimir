@@ -25,7 +25,7 @@ function ExampleProfile() {
       <img src={data.image} alt="avatar" />
       <h2>Bio</h2>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
+        Hi, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
         sed aliquam temporibus fugiat in accusantium sint ipsum sequi
         consequuntur, necessitatibus vitae iusto facere officia dolorum nobis.
         Deleniti veniam voluptates dolores.
