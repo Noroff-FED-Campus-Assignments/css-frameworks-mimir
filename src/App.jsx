@@ -1,5 +1,5 @@
 import { Outlet, Link } from "@tanstack/react-router";
-import "./App.scss";
+import "./App.css";
 
 function App() {
   return (
