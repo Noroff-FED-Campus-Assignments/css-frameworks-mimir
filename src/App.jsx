@@ -25,7 +25,7 @@ function App() {
       </main>
 
       <footer>
-        <small>Created with ❤️ by _REPLACE_</small>
+        <small className="text-red-500">Created with ❤️ by _REPLACE_</small>
       </footer>
     </>
   );
