@@ -1,12 +1,10 @@
 import React from "react";
 import logo from "../../assets/Y_logo_PNG (2).png";
-import gosling from "../../assets/Gosling.jpg";
-import margot from "../../assets/Margot.webp";
-import justin from "../../assets/Justin.jpeg";
+import user from "../../assets/basic-user.svg";
 
 function Header() {
   return (
-    <header className="bg-white-100 p-4 shadow-custom rounded-3xl border-2 border-black flex justify-between items-center">
+    <header className="bg-white p-4 shadow-custom rounded-3xl border-2 border-black flex justify-between items-center">
       {/* Left side - Logo */}
       <div>
         <img src={logo} alt="Logo" className="w-20 h-20" />
@@ -23,23 +21,23 @@ function Header() {
 
       {/* Right side - User Stories */}
       <div className="flex space-x-2">
-        <div className="w-16 h-16 rounded-full border-2 border-green-400">
+        <div className="w-14 h-14 rounded-full border-2 border-green-400">
           <img
-            src={gosling}
+            src={user}
             alt="Blue Circle"
             className="w-full h-full object-cover rounded-full"
           />
         </div>
-        <div className="w-16 h-16 rounded-full border-2 border-green-400">
+        <div className="w-14 h-14 rounded-full border-2 border-green-400">
           <img
-            src={margot}
+            src={user}
             alt="Green Circle"
             className="w-full h-full object-cover rounded-full"
           />
         </div>
-        <div className="w-16 h-16 rounded-full border-2 border-green-400">
+        <div className="w-14 h-14 rounded-full border-2 border-green-400">
           <img
-            src={justin}
+            src={user}
             alt="Red Circle"
             className="w-full h-full object-cover rounded-full"
           />
