@@ -11,12 +11,12 @@ const Input = ({ type, placeholder, value, onChange }) => (
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="bg-neutral-100 border-2 border-[#1E1E1E] text-gray-900 sm:text-sm rounded-lg focus:ring-sky-300 focus:border-sky-300 block w-full p-2.5"
+        className="bg-neutral-100 border-2 border-[#1E1E1E] text-gray-900 sm:text-sm rounded-3xl focus:ring-sky-300 focus:border-sky-300 block w-full p-2.5"
         aria-label={placeholder}
     />
 );
 const CustomButton = ({ label, onClick }) => (
-    <button onClick={onClick} className="bg-neutral-100 text-gray-900 px-4 py-2 rounded-xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">
+    <button onClick={onClick} className="bg-neutral-100 text-gray-900 px-4 py-2 rounded-3xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">
         {label}
     </button>
 );
@@ -59,15 +59,15 @@ function LoginForm() {
                     <CustomButton label="Sign up with Google" onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
                     <CustomButton label="Sign up with Apple" onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
                     <p className="text-xl text-center font-bold">or</p>
-                    <button className="bg-orange-200 text-gray-900 px-4 py-2 rounded-xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">Create an Account</button>
+                    <button className="bg-orange-200 text-gray-900 px-4 py-2 rounded-3xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">Create an Account</button>
                     <h3 className="text-xl font-bold">Already have an account?</h3>
-                    <button onClick={() => setShowLogin(true)} className="orange-200 text-gray-900 px-4 py-2 rounded-xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">
+                    <button onClick={() => setShowLogin(true)} className="orange-200 text-gray-900 px-4 py-2 rounded-3xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">
                         Sign In
                     </button>
                 </>
             ) : (
                 <section>
-                    <div className="w-full bg-orange-200 rounded-xl shadow-custom border-2 border-[#1E1E1E] md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                    <div className="w-full bg-orange-200 rounded-3xl shadow-custom border-2 border-[#1E1E1E] md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                         <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                                 Sign in to your account
@@ -86,7 +86,7 @@ function LoginForm() {
                                     </div>
                                     <a href="#" className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a>
                                 </div>
-                                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">Login</button>
+                                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-3xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">Login</button>
                                 <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                                     Don’t have an account yet? <a href="#" onClick={() => setShowLogin(false)} className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
                                 </p>
