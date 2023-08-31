@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
 
+// Reusable Input and Button Components
 const Input = ({ type, placeholder, value, onChange }) => (
     <input
         type={type}
@@ -13,17 +14,27 @@ const Input = ({ type, placeholder, value, onChange }) => (
         aria-label={placeholder}
     />
 );
+const CustomButton = ({ label, onClick }) => (
+    <button onClick={onClick} className="bg-blue-500 text-white px-4 py-2 rounded-xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">
+        {label}
+    </button>
+);
 
+// Loading, Error, and Success Messages
+const Loading = () => <div>Verifying...</div>;
+const ErrorMessage = ({ message }) => <div>An error occurred: {message}</div>;
+const SuccessMessage = () => <div>Login Successful</div>;
+
+// Loginform App
 function LoginForm() {
     const [showLogin, setShowLogin] = useState(false);
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const loginMutation = useMutation(login, {
-        onSuccess: (data) => {
-            navigate({ to: "/", params: { id: data.id } });
-        },
+    const loginMutation = useMutation(async ({ username, password }) => {
+        const data = await login({ username, password });
+        navigate({ to: "/", params: { id: data.id } });
     });
 
     const handleSubmit = (e) => {
@@ -34,34 +45,19 @@ function LoginForm() {
     return (
         <div className="bg-gray-50 dark:bg-gray-900 p-10 rounded-lg">
             <h1 className="text-4xl font-bold">Better than X!</h1>
+            {loginMutation.isLoading ? <Loading /> : null}
+            {loginMutation.isError ? <ErrorMessage message={loginMutation.error.message} /> : null}
+            {loginMutation.isSuccess ? <SuccessMessage /> : null}
 
-            {loginMutation.isLoading ? (
-                <div>Verifing...</div>
-            ) : (
-                <>
-                    {loginMutation.isError ? <div>An error occurred: {loginMutation.error.message}</div> : null}
-                    {loginMutation.isSuccess ? <div>Login Successful</div> : null}
-                </>
-            )}
             {!showLogin ? (
                 <>
                     <h2 className="text-2xl">Sign up now</h2>
-                    <button onClick={() => {
-                        loginMutation.mutate({
-                            username: "kminchelle",
-                            password: "0lelplR",
-                        });
-                    }} className="bg-red-500 text-white px-4 py-2 rounded-xl w-full my-2 shadow-custom">Sign up with Google</button>
-                    <button onClick={() => {
-                        loginMutation.mutate({
-                            username: "kminchelle",
-                            password: "0lelplR",
-                        });
-                    }} className="bg-black text-white px-4 py-2 rounded-xl w-full my-2 shadow-custom">Sign up with Apple</button>
+                    <CustomButton label="Sign up with Google" onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
+                    <CustomButton label="Sign up with Apple" onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
                     <p className="text-center">or</p>
-                    <button className="bg-green-500 text-white px-4 py-2 rounded-xl w-full my-2 shadow-custom">Create an Account</button>
+                    <button className="bg-green-500 text-white px-4 py-2 rounded-xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">Create an Account</button>
                     <h3 className="text-xl">Already have an account?</h3>
-                    <button onClick={() => setShowLogin(true)} className="bg-blue-500 text-white px-4 py-2 rounded-xl w-full my-2 shadow-custom">
+                    <button onClick={() => setShowLogin(true)} className="bg-blue-500 text-white px-4 py-2 rounded-xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">
                         Sign In
                     </button>
                 </>
