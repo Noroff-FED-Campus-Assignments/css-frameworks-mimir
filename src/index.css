@@ -61,19 +61,18 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #1e1e1e;
+    background-color: #f3e8dc;
   }
   a:hover {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #f5f5f5;
   }
 }
 
-
 /* Custom box-shadow  */
 .shadow-custom {
-  box-shadow: 3px 4px 0px 0px #1E1E1E;
+  box-shadow: 3px 4px 0px 0px #1e1e1e;
 }
