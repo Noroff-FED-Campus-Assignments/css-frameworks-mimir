@@ -51,17 +51,17 @@ function LoginForm() {
                             username: "kminchelle",
                             password: "0lelplR",
                         });
-                    }} className="bg-red-500 text-white p-2 rounded-full shadow-lg my-2 w-full">Sign up with Google</button>
+                    }} className="bg-red-500 text-white px-4 py-2 rounded-xl w-full my-2 shadow-custom">Sign up with Google</button>
                     <button onClick={() => {
                         loginMutation.mutate({
                             username: "kminchelle",
                             password: "0lelplR",
                         });
-                    }} className="bg-black text-white p-2 rounded-full shadow-lg my-2 w-full">Sign up with Apple</button>
+                    }} className="bg-black text-white px-4 py-2 rounded-xl w-full my-2 shadow-custom">Sign up with Apple</button>
                     <p className="text-center">or</p>
-                    <button className="bg-green-500 text-white p-2 rounded-full shadow-lg my-2 w-full">Create an Account</button>
+                    <button className="bg-green-500 text-white px-4 py-2 rounded-xl w-full my-2 shadow-custom">Create an Account</button>
                     <h3 className="text-xl">Already have an account?</h3>
-                    <button onClick={() => setShowLogin(true)} className="bg-blue-500 text-white p-2 rounded-full shadow-lg my-2 w-full">
+                    <button onClick={() => setShowLogin(true)} className="bg-blue-500 text-white px-4 py-2 rounded-xl w-full my-2 shadow-custom">
                         Sign In
                     </button>
                 </>
@@ -86,7 +86,7 @@ function LoginForm() {
                                     </div>
                                     <a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a>
                                 </div>
-                                <button type="submit" className="bg-blue-500 text-white p-2 rounded-full shadow-lg w-full">Login</button>
+                                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">Login</button>
                                 <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                                     Don’t have an account yet? <a href="#" onClick={() => setShowLogin(false)} class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
                                 </p>

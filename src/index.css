@@ -71,3 +71,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+/* Custom box-shadow  */
+.shadow-custom {
+  box-shadow: 3px 4px 0px 0px #1E1E1E;
+}
