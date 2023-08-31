@@ -44,31 +44,31 @@ function LoginForm() {
     };
 
     return (
-        <div className="red-100 dark:bg-gray-900 p-10 rounded-lg">
+        <div className="red-100 dark:bg-gray-900 p-4 md:p-10 rounded-lg">
             <div className="flex justify-center items-center">
-                <img className="w-[85.17px] h-20" src={logo}></img>
+                <img className="h-20 sm:h-22 md:h-24 lg:h-26" src={logo}></img>
             </div>
-            <h1 className="text-4xl font-bold">Better than X!</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Better than X!</h1>
             {loginMutation.isLoading ? <Loading /> : null}
             {loginMutation.isError ? <ErrorMessage message={loginMutation.error.message} /> : null}
             {loginMutation.isSuccess ? <SuccessMessage /> : null}
 
             {!showLogin ? (
                 <>
-                    <h2 className="text-2xl font-bold">Sign up now</h2>
+                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Sign up now</h2>
                     <CustomButton label="Sign up with Google" onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
                     <CustomButton label="Sign up with Apple" onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
-                    <p className="text-xl text-center font-bold">or</p>
+                    <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl  text-center font-bold">or</p>
                     <button className="bg-orange-200 text-gray-900 px-4 py-2 rounded-3xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">Create an Account</button>
-                    <h3 className="text-xl font-bold">Already have an account?</h3>
+                    <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">Already have an account?</h3>
                     <button onClick={() => setShowLogin(true)} className="orange-200 text-gray-900 px-4 py-2 rounded-3xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">
                         Sign In
                     </button>
                 </>
             ) : (
                 <section>
-                    <div className="w-full bg-orange-200 rounded-3xl shadow-custom border-2 border-[#1E1E1E] md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-                        <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+                    <div className="w-full bg-orange-200 rounded-3xl sm:w-full md:w-1/2shadow-custom border-2 border-[#1E1E1E] md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                        <div className="p-4 space-y-2 sm:space-y-4 md:space-y-6 sm:p-8">
                             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                                 Sign in to your account
                             </h1>
