@@ -2,6 +2,7 @@ import { login } from "../../lib/my-api";
 import React, { useState } from 'react';
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
+import logo from "../../assets/Y_logo_PNG (2).png";
 
 // Reusable Input and Button Components
 const Input = ({ type, placeholder, value, onChange }) => (
@@ -15,7 +16,7 @@ const Input = ({ type, placeholder, value, onChange }) => (
     />
 );
 const CustomButton = ({ label, onClick }) => (
-    <button onClick={onClick} className="bg-blue-500 text-white px-4 py-2 rounded-xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">
+    <button onClick={onClick} className="bg-neutral-100 text-gray-900 px-4 py-2 rounded-xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">
         {label}
     </button>
 );
@@ -43,7 +44,10 @@ function LoginForm() {
     };
 
     return (
-        <div className="bg-gray-50 dark:bg-gray-900 p-10 rounded-lg">
+        <div className="red-100 dark:bg-gray-900 p-10 rounded-lg">
+            <div className="flex justify-center items-center">
+                <img className="w-[85.17px] h-20" src={logo}></img>
+            </div>
             <h1 className="text-4xl font-bold">Better than X!</h1>
             {loginMutation.isLoading ? <Loading /> : null}
             {loginMutation.isError ? <ErrorMessage message={loginMutation.error.message} /> : null}
@@ -54,10 +58,10 @@ function LoginForm() {
                     <h2 className="text-2xl">Sign up now</h2>
                     <CustomButton label="Sign up with Google" onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
                     <CustomButton label="Sign up with Apple" onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
-                    <p className="text-center">or</p>
-                    <button className="bg-green-500 text-white px-4 py-2 rounded-xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">Create an Account</button>
+                    <p className="text-l text-center">or</p>
+                    <button className="bg-orange-200 text-gray-900 px-4 py-2 rounded-xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">Create an Account</button>
                     <h3 className="text-xl">Already have an account?</h3>
-                    <button onClick={() => setShowLogin(true)} className="bg-blue-500 text-white px-4 py-2 rounded-xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">
+                    <button onClick={() => setShowLogin(true)} className="orange-200 text-gray-900 px-4 py-2 rounded-xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">
                         Sign In
                     </button>
                 </>
