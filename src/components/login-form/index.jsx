@@ -4,8 +4,6 @@ import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
 import logo from "../../assets/Y_logo_PNG (2).png";
 import SignUpForm from "../sign-up_form";
-/* import GoogleLogo from './path/to/google-logo.svg';
-import AppleLogo from './path/to/apple-logo.svg'; */
 
 // Reusable Input and Button Components
 const Input = ({ type, placeholder, value, onChange }) => (
