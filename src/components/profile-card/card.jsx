@@ -1,5 +1,4 @@
 import React from "react";
-import { FaHeart, FaComment, FaShare } from "react-icons/fa"; // Import Font Awesome icons
 
 function ProfileCard({ user }) {
   return (
