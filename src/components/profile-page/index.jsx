@@ -1,9 +1,9 @@
 import React from "react";
 import { useUsersPosts, useUser } from "../../lib/my-api";
-import { ProfileCard, Post } from "../profile-card"; 
+import { ProfileCard, Post } from "../profile-card/card"; // Import your updated ProfileCard and Post components
 
 function ExampleUsersPosts() {
-  const userId = 1; // Replace with the user's ID
+  const userId = 2; // Replace with the user's ID
   const { status: postsStatus, error: postsError, data: postsData } = useUsersPosts(userId);
   const { status: userStatus, error: userError, data: userData } = useUser(userId);
 
