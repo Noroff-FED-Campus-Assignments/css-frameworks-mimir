@@ -4,7 +4,7 @@ import user from "../../assets/basic-user.svg";
 
 function Header() {
   return (
-    <header className="bg-white p-4 shadow-custom rounded-3xl border-2 border-black flex justify-between items-center">
+    <header className="bg-white p-4 shadow-custom rounded-3xl border-2 border-black flex justify-between items-center mb-6">
       {/* Left side - Logo */}
       <div>
         <img src={logo} alt="Logo" className="w-20 h-20" />
