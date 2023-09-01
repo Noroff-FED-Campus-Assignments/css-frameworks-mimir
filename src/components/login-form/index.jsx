@@ -4,6 +4,8 @@ import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
 import logo from "../../assets/Y_logo_PNG (2).png";
 import SignUpForm from "../sign-up_form";
+import Google from '../../assets/icons/google.svg';
+import Apple from '../../assets/icon/apple.svg';
 
 // Reusable Input and Button Components
 const Input = ({ type, placeholder, value, onChange }) => (
@@ -12,7 +14,7 @@ const Input = ({ type, placeholder, value, onChange }) => (
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="bg-neutral-100 border-2 border-[#1E1E1E] text-gray-900 sm:text-sm rounded-3xl focus:ring-sky-300 focus:border-sky-300 block w-full p-2.5"
+        className="bg-neutral-100 border-2 border-[#1E1E1E] text-gray-900 sm:text-sm rounded-3xl focus:ring-sky-100 focus:border-sky-100 block w-full p-2.5"
         aria-label={placeholder}
     />
 );
@@ -48,21 +50,27 @@ function LoginForm() {
     return (
         <div className="red-100 dark:bg-gray-900 p-4 md:p-10 rounded-lg">
             <div className="flex justify-center items-center">
-                <img className="h-20 sm:h-22 md:h-24 lg:h-26" src={logo}></img>
+                <img className="h-22 sm:h-24 md:h-26 lg:h-28 xl:h-30 my-5" src={logo}></img>
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Better than X!</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 mb-5">Better than X!</h1>
             {loginMutation.isLoading ? <Loading /> : null}
             {loginMutation.isError ? <ErrorMessage message={loginMutation.error.message} /> : null}
             {loginMutation.isSuccess ? <SuccessMessage /> : null}
 
             {activeForm === 'login' ? (!showLogin ? (
                 <>
-                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Sign up now</h2>
-                    <CustomButton label="Sign up with Google" onClick={() => loginMutation.mutate({ username: "testuser", password: "tester" })} />
-                    <CustomButton label="Sign up with Apple" onClick={() => loginMutation.mutate({ username: "testuser", password: "tester" })} />
+                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold my-2">Sign up now</h2>
+                    <CustomButton
+                        label={<><img src={Google} alt="Google" /> Sign up with Google</>}
+                        onClick={() => loginMutation.mutate({ username: "testuser", password: "tester" })}
+                    />
+                    <CustomButton
+                        label={<><img src={Apple} alt="Apple" /> Sign up with Apple</>}
+                        onClick={() => loginMutation.mutate({ username: "testuser", password: "tester" })}
+                    />
                     <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl  text-center font-bold">or</p>
-                    <button onClick={() => setActiveForm('signup')} className="bg-orange-200 text-gray-900 px-4 py-2 rounded-3xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">Create an Account</button>
-                    <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">Already have an account?</h3>
+                    <button onClick={() => setActiveForm('signup')} className="bg-orange-200 text-gray-900 px-4 py-2 rounded-3xl w-full mt-2 mb-5 border-2 border-[#1E1E1E] shadow-custom">Create an Account</button>
+                    <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold my-2">Already have an account?</h3>
                     <button onClick={() => setShowLogin(true)} className="orange-200 text-gray-900 px-4 py-2 rounded-3xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">
                         Sign In
                     </button>
@@ -82,7 +90,7 @@ function LoginForm() {
                                         <div className="flex items-center h-5">
                                             <input id="remember" aria-describedby="remember" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="" />
                                         </div>
-                                        <div class="ml-3 text-sm">
+                                        <div className="ml-3 text-sm">
                                             <label for="remember" className="text-gray-500 dark:text-gray-300">Remember me</label>
                                         </div>
                                     </div>
