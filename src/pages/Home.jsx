@@ -1,11 +1,11 @@
 // import ExampleUsersPosts from "../components/example-users-posts"; //
 import { Outlet, Link } from "@tanstack/react-router";
-import NavBar from "../components/home-nav/nav.jsx"
+import OtherPosts from "../components/posts/index.jsx"
 
 function HomePage() {
   return (
     <>
-      <NavBar />
+      <OtherPosts />
     </>
   );
 }
