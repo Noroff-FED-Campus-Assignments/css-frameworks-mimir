@@ -19,7 +19,7 @@ const useMetaTags = (title, description) => {
         // Cleanup
         return () => {
             document.title = 'Y';
-            meta.content = 'Default Description';
+            meta.content = 'Better than X!';
         };
     }, [title, description]);
 };
