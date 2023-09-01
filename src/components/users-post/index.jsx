@@ -6,7 +6,7 @@ import EmojiIcon from "../../assets/icons/emoji.svg";
 
 function PostSubmission() {
   return (
-    <div className="bg-white w-full text-xl p-4 shadow-custom rounded-3xl border-2 border-black">
+    <div className="bg-white w-full text-xl p-4 mb-8 shadow-custom rounded-3xl border-2 border-black">
       <div className="flex items-start space-x-4">
         {/* User Profile */}
         <img src={UserIcon} alt="User Icon" className="w-10 h-10 rounded-full" />
