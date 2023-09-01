@@ -2,7 +2,7 @@ import React from "react";
 import { useUser, useUsersPosts } from "../../lib/my-api"; // Import your custom API hooks
 
 function ProfilePage() {
-  const userId = 4; 
+  const userId = 4;
   const {
     status: userStatus,
     error: userError,
@@ -62,7 +62,7 @@ function ProfilePage() {
 
       {/* Posts Section */}
       <div className="mt-6">
-        <h2 className="text-2xl font-semibold text-gray-800">Posts</h2>
+        <h1 className="text-2xl font-semibold text-white-800 ">POSTS</h1>
         {postsData.posts.map((post) => (
           <div
             key={post.id}
@@ -73,7 +73,7 @@ function ProfilePage() {
               <img
                 src={userData.image}
                 alt="Avatar"
-                className="w-10 h-10 rounded-full object-cover border-2 border-indigo-600"
+                className="w-11 h-11 object-cover border-2 border-indigo-600"
               />
               <div className="ml-2">
                 <h3 className="text-lg font-semibold text-indigo-600">
