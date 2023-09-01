@@ -47,7 +47,7 @@ const SuccessMessage = () => (
     </div>
 );
 
-// Loginform App
+// Login form App
 function LoginForm() {
     const [activeForm, setActiveForm] = useState('login');
     const [showLogin, setShowLogin] = useState(false);
