@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { signUp } from "../../lib/my-api";
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
 
@@ -10,6 +11,8 @@ const Input = ({ type, placeholder, value, onChange }) => (
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        required={true}
+        minLength={4}
         className="bg-neutral-100 border-2 border-[#1E1E1E] text-gray-900 sm:text-sm rounded-3xl focus:ring-sky-300 focus:border-sky-300 block w-full p-2.5"
         aria-label={placeholder}
     />
@@ -23,17 +26,12 @@ const SignUpForm = ({ setShowLogin, setActiveForm }) => {
     const [showModal, setShowModal] = useState(false);
 
     const signUpMutation = useMutation(async ({ email, password }) => {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve({ id: "some-id" });
-            }, 500);
-        }).then((data) => {
-            setShowModal(true);
-            setTimeout(() => {
-                setShowModal(false);
-                navigate({ to: "/", params: { id: data.id } });
-            }, 2500);
-        });
+        const data = await signUp({ email, password });
+        setShowModal(true);
+        setTimeout(() => {
+            setShowModal(false);
+            navigate({ to: "/", params: { id: data.id } });
+        }, 2500);
     });
 
     const handleSubmit = (e) => {
@@ -47,9 +45,9 @@ const SignUpForm = ({ setShowLogin, setActiveForm }) => {
         <div className="red-100 dark:bg-gray-900 p-4 md:p-10 rounded-lg">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Create an Account</h2>
             <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
-                <Input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required autoComplete="email" />
-                <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required autoComplete="new-password" />
-                <Input type="password" placeholder="Confirm Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required autoComplete="new-password" />
+                <Input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required={true} autoComplete="email" />
+                <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required={true} minLength={4} autoComplete="new-password" />
+                <Input type="password" placeholder="Confirm Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required={true} minLength={4} autoComplete="new-password" />
                 <button className="bg-neutral-100 text-gray-900 px-4 py-2 rounded-3xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom" onClick={handleSubmit} disabled={!email || !password || !confirmPassword}>
                     Sign Up
                 </button>

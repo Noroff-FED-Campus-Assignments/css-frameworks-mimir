@@ -70,3 +70,16 @@ export function useLogin(username, password) {
     mutationFn: () => login(username, password),
   });
 }
+
+// New user SignUp
+export async function signUp({ email, password }) {
+  try {
+    const response = await axios.post(`${BASE_URL}/auth/signup`, {
+      email,
+      password,
+    });
+    return response.data;
+  } catch (error) {
+    return error;
+  }
+}

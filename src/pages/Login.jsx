@@ -1,4 +1,4 @@
-import ExampleLoginForm from "../components/example-login-form";
+import React from 'react';
 import LoginForm from "../components/login-form";
 
 function LoginPage() {
