@@ -1,9 +1,9 @@
-import ExampleProfile from "../components/example-profile";
+import Profile from "../components/profile-page";
 
 function ProfilePage() {
   return (
     <>
-      <ExampleProfile />
+      <Profile />
     </>
   );
 }
