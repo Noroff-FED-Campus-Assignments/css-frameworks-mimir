@@ -15,7 +15,7 @@ const Input = ({ type, placeholder, value, onChange }) => (
     />
 );
 
-const SignUpForm = () => {
+const SignUpForm = ({ setShowLogin, setActiveForm }) => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -41,6 +41,9 @@ const SignUpForm = () => {
                 <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 <Input type="password" placeholder="Confirm Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                 <button className="bg-neutral-100 text-gray-900 px-4 py-2 rounded-3xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom" onClick={handleSubmit}>Sign Up</button>
+                <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+                    Allready have an account? <a href="#" onClick={() => { setShowLogin(true); setActiveForm('login'); }} className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign In</a>
+                </p>
             </form>
         </div>
     );
