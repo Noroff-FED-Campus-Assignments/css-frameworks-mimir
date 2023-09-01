@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
 import logo from "../../assets/Y_logo_PNG (2).png";
+import SignUpForm from "../sign-up_form";
 
 // Reusable Input and Button Components
 const Input = ({ type, placeholder, value, onChange }) => (
@@ -28,6 +29,7 @@ const SuccessMessage = () => <div>Login Successful</div>;
 
 // Loginform App
 function LoginForm() {
+    const [activeForm, setActiveForm] = useState('login');
     const [showLogin, setShowLogin] = useState(false);
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
@@ -53,13 +55,13 @@ function LoginForm() {
             {loginMutation.isError ? <ErrorMessage message={loginMutation.error.message} /> : null}
             {loginMutation.isSuccess ? <SuccessMessage /> : null}
 
-            {!showLogin ? (
+            {activeForm === 'login' ? (!showLogin ? (
                 <>
                     <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Sign up now</h2>
                     <CustomButton label="Sign up with Google" onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
                     <CustomButton label="Sign up with Apple" onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
                     <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl  text-center font-bold">or</p>
-                    <button className="bg-orange-200 text-gray-900 px-4 py-2 rounded-3xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">Create an Account</button>
+                    <button onClick={() => setActiveForm('signup')} className="bg-orange-200 text-gray-900 px-4 py-2 rounded-3xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">Create an Account</button>
                     <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">Already have an account?</h3>
                     <button onClick={() => setShowLogin(true)} className="orange-200 text-gray-900 px-4 py-2 rounded-3xl w-full my-2 border-2 border-[#1E1E1E] shadow-custom">
                         Sign In
@@ -95,7 +97,9 @@ function LoginForm() {
                     </div>
                 </section>
             )
-            }
+            ) : (
+                <SignUpForm setShowLogin={setShowLogin} setActiveForm={setActiveForm} />
+            )}
         </div >
     )
 };
