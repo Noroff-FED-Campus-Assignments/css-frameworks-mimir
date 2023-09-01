@@ -69,9 +69,9 @@ function LoginForm() {
                 <section>
                     <div className="w-full bg-orange-200 rounded-3xl sm:w-full md:w-1/2shadow-custom border-2 border-[#1E1E1E] md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                         <div className="p-4 space-y-2 sm:space-y-4 md:space-y-6 sm:p-8">
-                            <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                            <h2 className="text-l sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">
                                 Sign in to your account
-                            </h1>
+                            </h2>
                             <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6" action="#">
                                 <Input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
                                 <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
