@@ -1,7 +1,7 @@
 // import ExampleUsersPosts from "../components/example-users-posts"; //
 import { Outlet, Link } from "@tanstack/react-router"
-import Header from "../components/header/header.jsx";
-import NavBar from "../components/home-nav/nav.jsx";
+import Header from "../components/header/index.jsx";
+import NavBar from "../components/home-nav/index.jsx";
 import PostSubmission from "../components/users-post/index.jsx";
 import OtherPosts from "../components/posts/index.jsx";
 import TrendingSection from "../components/trending/index.jsx";
