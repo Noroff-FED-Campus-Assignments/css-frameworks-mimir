@@ -44,7 +44,7 @@ const SignUpForm = ({ setShowLogin, setActiveForm }) => {
     return (
         <div className="red-100 dark:bg-gray-900 p-4 md:p-10 rounded-lg">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Create an Account</h2>
-            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6" action="/profile">
                 <Input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required={true} autoComplete="email" />
                 <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required={true} minLength={4} autoComplete="new-password" />
                 <Input type="password" placeholder="Confirm Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required={true} minLength={4} autoComplete="new-password" />
@@ -59,7 +59,7 @@ const SignUpForm = ({ setShowLogin, setActiveForm }) => {
                 <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
                     <div className="modal-content bg-white rounded-lg p-6">
                         <h2 className="text-2xl font-bold">Thank You!</h2>
-                        <p className="mt-2 text-lg">Welcome and thank you for signing up.</p>
+                        <p className="mt-2 text-lg">Welcome and thank you for signing up!</p>
                     </div>
                 </div>
             )}

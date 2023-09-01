@@ -78,8 +78,8 @@ function LoginForm() {
             {activeForm === 'login' ? (!showLogin ? (
                 <>
                     <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold my-2">Sign up now</h2>
-                    <CustomButton label="Sign up with Google" onClick={() => loginMutation.mutate({ username: "testuser", password: "tester" })} />
-                    <CustomButton label="Sign up with Apple" onClick={() => loginMutation.mutate({ username: "testuser", password: "tester" })} />
+                    <CustomButton label="Sign up with Google" onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
+                    <CustomButton label="Sign up with Apple" onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
                     <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl  text-center font-bold">or</p>
                     <button onClick={() => setActiveForm('signup')} className="bg-orange-200 text-gray-900 px-4 py-2 rounded-3xl w-full mt-2 mb-5 border-2 border-[#1E1E1E] shadow-custom">Create an Account</button>
                     <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold my-2">Already have an account?</h3>
