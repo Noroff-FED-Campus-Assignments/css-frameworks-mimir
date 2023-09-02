@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
 import logo from "../../assets/Y_logo.png";
-import logoWhite from "../../assets/Y_logo-white.png";
 import SignUpForm from "../sign-up_form";
 import google from "../../assets/icons/google-logo-48.svg";
 import apple from "../../assets/icons/apple-logo-48.svg";
@@ -17,12 +16,12 @@ const Input = ({ type, placeholder, value, onChange, required, minLength }) => (
         onChange={onChange}
         required={true}
         minLength={4}
-        className="bg-neutral-100 border-2 border-[#F5F5F5] text-gray-900 sm:text-sm rounded-3xl focus:ring-sky-100 focus:border-sky-100 block w-full p-2.5"
+        className="bg-neutral-100 border-2 border-orange-100 text-gray-900 leading-tight tracking-tight sm:text-sm rounded-3xl focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         aria-label={placeholder}
     />
 );
 const CustomButton = ({ label, onClick, icon }) => (
-    <button onClick={onClick} className="bg-neutral-100 text-gray-900 px-4 py-2 rounded-3xl w-full my-2 border-2 border-[#F5F5F5] hover:border-white dark:hover:bg-gray-100 dark:bg-gray-200 dark:border-gray-200 shadow-custom">
+    <button onClick={onClick} className="bg-neutral-100 text-gray-900 leading-tight tracking-tight px-4 py-2 rounded-3xl w-full my-2 border-2 border-[#F5F5F5] hover:border-white dark:hover:bg-gray-100 dark:bg-gray-200 dark:border-gray-200 shadow-custom">
         {icon && <img src={icon} alt={label} className="inline-block mr-2 w-7 h-7" />}
         {label}
     </button>
@@ -30,22 +29,22 @@ const CustomButton = ({ label, onClick, icon }) => (
 
 // Loading, Error, and Success Messages
 const Loading = () => (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-        <div className="text-white text-xl font-bold bg-transparent">
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50">
+        <div className="text-white text-2xl font-bold bg-transparent">
             Verifying...
         </div>
     </div>
 );
 const ErrorMessage = ({ message }) => (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-        <div className="text-white text-xl font-bold bg-transparent">
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50">
+        <div className="text-white text-2xl font-bold bg-transparent">
             An error occurred: {message}
         </div>
     </div>
 );
 const SuccessMessage = () => (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-        <div className="text-white text-xl font-bold bg-transparent">
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50">
+        <div className="text-white text-2xl font-bold bg-transparent">
             Login Successful...
         </div>
     </div>
@@ -77,12 +76,9 @@ function LoginForm() {
     return (
         <div className="red-100 dark:bg-gray-900 p-4 md:p-10 rounded-lg">
             <div className="flex justify-center items-center">
-                <img className={`h-22 sm:h-24 md:h-26 lg:h-28 xl:h-30 my-5 logo ${spin ? 'spin' : ''}`} src={logo}></img>
+                <img className={`h-22 sm:h-24 md:h-26 lg:h-28 xl:h-30 my-5 logo dark:invert ${spin ? 'spin' : ''}`} src={logo}></img>
             </div>
-            {/*   <div className="flex justify-center items-center">
-                <img className={`h-22 sm:h-24 md:h-26 lg:h-28 xl:h-30 my-5 logo ${spin ? 'spin' : ''}`} src={logoWhite}></img>
-            </div> */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 mb-5"><p className="text-sm text-neutral-100 dark:text-gray-700">is</p>Better than X!</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-5"><p className="text-sm text-white dark:text-gray-700">is</p>Better than X!</h1>
             {loginMutation.isLoading ? <Loading /> : null}
             {loginMutation.isError ? <ErrorMessage message={loginMutation.error.message} /> : null}
             {loginMutation.isSuccess ? <SuccessMessage /> : null}
@@ -94,7 +90,7 @@ function LoginForm() {
                         <CustomButton label="Sign up with Google" icon={google} onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
                         <CustomButton label="Sign up with Apple" icon={apple} onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
                         <p className="text-center font-bold">or</p>
-                        <button onClick={() => setActiveForm('signup')} className="bg-orange-200 dark:bg-blue-500 dark:text-white dark:border-blue-500 dark:hover:border-blue-400  text-gray-900 px-4 py-2 rounded-3xl w-full mt-2 mb-5 border-2 border-orange-200 hover:border-orange-100 shadow-custom">Create an Account</button>
+                        <button onClick={() => setActiveForm('signup')} className="bg-orange-200 dark:bg-blue-500 dark:text-white dark:border-blue-500 dark:hover:border-blue-400  text-gray-900 px-4 py-2 rounded-3xl w-full mt-2 mb-5 border-2 border-orange-200 hover:border-orange-100 shadow-custom leading-tight tracking-tight">Create an Account</button>
                         <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold my-2">Already have an account?</h3>
                         <CustomButton label="Sign In" onClick={() => setShowLogin(true)} />
                     </div>
@@ -107,8 +103,8 @@ function LoginForm() {
                                 Sign in to your account
                             </h2>
                             <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6" action="/profile">
-                                <Input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required={true} autoComplete="email" />
-                                <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required={true} minLength={4} autoComplete="current-password" />
+                                <Input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required={true} autocomplete="email" />
+                                <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required={true} minLength={4} autocomplete="current-password" />
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-start">
                                         <div className="flex items-center h-5">
@@ -120,7 +116,7 @@ function LoginForm() {
                                     </div>
                                     <a href="#" className="text-gray-700 dark:text-gray-400 text-xs sm:text-sm md:text-sm lg:text-sm font-medium text-primary-600 hover:underline ml-1">Forgot password?</a>
                                 </div>
-                                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-3xl w-full my-2 border-2 border-blue-500 hover:border-blue-400 shadow-custom">Login</button>
+                                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-3xl w-full my-2 border-2 border-blue-500 hover:border-blue-400 shadow-custom leading-tight tracking-tight">Login</button>
                                 <p className="text-xs sm:text-sm font-light text-gray-700 dark:text-gray-400">
                                     Don’t have an account yet? <a href="#" onClick={() => setShowLogin(false)} className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
                                 </p>
