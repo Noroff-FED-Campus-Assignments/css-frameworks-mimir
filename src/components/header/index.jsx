@@ -10,8 +10,8 @@ function Header() {
         <img src={logo} alt="Logo" className="w-20 h-20" />
       </div>
 
-      {/* Middle - Search Bar */}
-      <div className="w-96 h-20 flex items-center mx-4">
+      {/* Middle - Search Bar (hidden on mobile) */}
+      <div className="hidden md:flex w-96 h-20 items-center mx-4">
         <input
           type="text"
           placeholder="Search anything.."
