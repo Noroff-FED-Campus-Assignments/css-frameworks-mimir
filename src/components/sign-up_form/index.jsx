@@ -13,7 +13,7 @@ const Input = ({ type, placeholder, value, onChange }) => (
         onChange={onChange}
         required={true}
         minLength={4}
-        className="bg-neutral-100 border-2 border-orange-100 text-gray-900 sm:text-sm rounded-3xl focus:ring-sky-300 focus:border-sky-300 block w-full p-2.5"
+        className="bg-neutral-100 border-2 border-orange-100 text-gray-900 leading-tight tracking-tight sm:text-sm rounded-3xl focus:ring-primary-600 focus:border-primary-600 block w-full min-w-[220px] sm:min-w-[300px] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         aria-label={placeholder}
     />
 );
@@ -46,13 +46,13 @@ const SignUpForm = ({ setShowLogin, setActiveForm }) => {
             <div className='p-6 space-y-4 sm:space-y-5 md:space-y-7 sm:p-8'>
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Create an Account</h2>
                 <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6" action="/profile">
-                    <Input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required={true} autoComplete="email" />
-                    <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required={true} minLength={4} autoComplete="new-password" />
-                    <Input type="password" placeholder="Confirm Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required={true} minLength={4} autoComplete="new-password" />
-                    <button className="bg-blue-500 text-white px-4 py-2 rounded-3xl w-full my-2 border-2 border-blue-500 hover:border-blue-400 shadow-custom" onClick={handleSubmit} disabled={!email || !password || !confirmPassword}>
+                    <Input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required={true} autocomplete="email" />
+                    <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required={true} minLength={4} autocomplete="new-password" />
+                    <Input type="password" placeholder="Confirm Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required={true} minLength={4} autocomplete="new-password" />
+                    <button className="bg-blue-500 text-white px-4 py-2 rounded-3xl w-full my-2 border-2 border-blue-500 hover:border-blue-400 shadow-custom leading-tight tracking-tight" onClick={handleSubmit} disabled={!email || !password || !confirmPassword}>
                         Sign Up
                     </button>
-                    <p className="text-xs sm:text-sm font-light text-gray-700 dark:text-gray-400">
+                    <p className="text-xs sm:text-sm font-light text-gray-700 dark:text-gray-400 leading-tight tracking-tight">
                         Already have an account? <a href="#" onClick={() => { setShowLogin(true); setActiveForm('login'); }} className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign In</a>
                     </p>
                 </form>
@@ -60,8 +60,8 @@ const SignUpForm = ({ setShowLogin, setActiveForm }) => {
             {showModal && (
                 <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
                     <div className="modal-content bg-neutral-100 border-2 border-orange-100 rounded-lg p-6">
-                        <h2 className="text-2xl font-bold">Thank You!</h2>
-                        <p className="mt-2 text-base">Welcome and thank you for signing up!</p>
+                        <h2 className="text-2xl font-bold leading-tight tracking-tight">Thank You!</h2>
+                        <p className="mt-2 text-base leading-tight tracking-tight">Welcome and thank you for signing up!</p>
                     </div>
                 </div>
             )}
