@@ -11,7 +11,7 @@ function NavBar() {
   return (
     <nav className="bg-white rounded-3xl p-5 w-64 border-2 border-black shadow-custom flex flex-col text-xl">
       <ul className="space-y-6">
-        <li className="flex items-center p-2 bg-yellow-200 rounded-3xl border border-black hover:bg-yellow-400">
+        <li className="flex items-center p-2 bg-orange-200 rounded-3xl border border-black hover:bg-yellow-400">
           <img src={HomeIcon} alt="Home Icon" className="w-6 h-6 mr-2" />
           <Link to="/" style={{ color: "black" }}>
             Home
@@ -61,7 +61,7 @@ function NavBar() {
       <div className="pb-16"></div>
       <div className="pb-16"></div>
 
-      <button className="bg-yellow-200 rounded-3xl border border-black p-2 w-full mt-auto hover:bg-yellow-400">
+      <button className="bg-orange-200 rounded-3xl border border-black p-2 w-full mt-auto hover:bg-yellow-400">
         <Link to="/Login" style={{ color: "black" }}>
           Login
         </Link>

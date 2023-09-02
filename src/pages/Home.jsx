@@ -6,6 +6,7 @@ import PostSubmission from "../components/users-post/index.jsx";
 import OtherPosts from "../components/posts/index.jsx";
 import TrendingSection from "../components/trending/index.jsx";
 import useMetaTags from "../hooks/useMetaTags";
+import MobileNav from "../components/mobile-nav/index.jsx";
 
 function HomePage() {
   useMetaTags("Home", "Welcome to our homepage.");
