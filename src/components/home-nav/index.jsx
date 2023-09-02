@@ -10,7 +10,7 @@ import CogIcon from "../../assets/icons/cog.svg";
 function NavBar() {
   return (
     <nav className="bg-white rounded-3xl p-5 w-64 border-2 border-black shadow-custom flex flex-col text-xl">
-      <ul className="space-y-4">
+      <ul className="space-y-6">
         <li className="flex items-center p-2 bg-yellow-200 rounded-3xl border border-black hover:bg-yellow-400">
           <img src={HomeIcon} alt="Home Icon" className="w-6 h-6 mr-2" />
           <Link to="/" style={{ color: "black" }}>
