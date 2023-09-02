@@ -9,7 +9,7 @@ import CogIcon from "../../assets/icons/cog.svg";
 
 function NavBar() {
   return (
-    <nav className="bg-white rounded-3xl p-5 w-64 border-2 border-black shadow-custom flex flex-col text-xl">
+    <nav className="hidden md:flex bg-white rounded-3xl p-5 w-64 border-2 border-black shadow-custom flex flex-col text-xl">
       <ul className="space-y-6">
         <li className="flex items-center bg-orange-200 dark:bg-blue-500 dark:text-white dark:border-blue-500 dark:hover:border-blue-400  text-gray-900 p-2 w-full mt-auto rounded-3xl border-2 border-orange-200 hover:border-orange-100 shadow-custom leading-tight tracking-tigh">
           <img src={HomeIcon} alt="Home Icon" className="w-6 h-6 mr-2" />
