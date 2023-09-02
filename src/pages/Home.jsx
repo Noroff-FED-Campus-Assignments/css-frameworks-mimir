@@ -10,31 +10,32 @@ import useMetaTags from "../hooks/useMetaTags";
 function HomePage() {
   useMetaTags("Home", "Welcome to our homepage.");
   return (
-    <div>
+    <div className="mt-4">
       {/* Header with margin-bottom */}
       <Header />
 
       {/* Main Content */}
       <div className="flex">
         {/* Left Side */}
-        <div className="flex-1">
+        <div>
           <NavBar />
         </div>
 
         {/* Middle */}
-        <div className="flex-1">
+        <div className="mx-6" style={{ overflowY: "auto", flexGrow: 1 }}>
           <PostSubmission />
           <OtherPosts />
         </div>
 
         {/* Right Side */}
-        <div className="flex-1">
+        <div>
           <TrendingSection />
         </div>
       </div>
     </div>
   );
 }
+
 
 export default HomePage;
 
