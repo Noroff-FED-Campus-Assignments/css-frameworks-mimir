@@ -16,7 +16,7 @@ const Input = ({ type, placeholder, value, onChange, required, minLength }) => (
         onChange={onChange}
         required={true}
         minLength={4}
-        className="bg-neutral-100 border-2 border-orange-100 text-gray-900 leading-tight tracking-tight sm:text-sm rounded-3xl focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        className="bg-neutral-100 border-2 border-orange-100 text-gray-900 leading-tight tracking-tight sm:text-sm rounded-3xl focus:ring-primary-600 focus:border-primary-600 block w-full min-w-[220px] sm:min-w-[300px] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         aria-label={placeholder}
     />
 );
@@ -78,7 +78,7 @@ function LoginForm() {
             <div className="flex justify-center items-center">
                 <img className={`h-22 sm:h-24 md:h-26 lg:h-28 xl:h-30 my-5 logo dark:invert ${spin ? 'spin' : ''}`} src={logo}></img>
             </div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-5"><p className="text-sm text-white dark:text-gray-700">is</p>Better than X!</h1>
+            <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-5"><p className="text-sm text-white dark:text-gray-700">is</p>Better than X!</h1>
             {loginMutation.isLoading ? <Loading /> : null}
             {loginMutation.isError ? <ErrorMessage message={loginMutation.error.message} /> : null}
             {loginMutation.isSuccess ? <SuccessMessage /> : null}
@@ -102,7 +102,7 @@ function LoginForm() {
                             <h2 className="text-l sm:text-xl md:text-2xl lg:text-2xl font-bold leading-tight tracking-tight text-gray-800 dark:text-white">
                                 Sign in to your account
                             </h2>
-                            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6" action="/profile">
+                            <form onSubmit={handleSubmit} className="p-1 space-y-4 md:space-y-6" action="/profile">
                                 <Input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required={true} autocomplete="email" />
                                 <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required={true} minLength={4} autocomplete="current-password" />
                                 <div className="flex items-center justify-between">
