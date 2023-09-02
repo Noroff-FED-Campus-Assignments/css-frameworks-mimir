@@ -55,8 +55,8 @@ All of these todo's must be done to pass the assignment.
 
 Make sure you go through this checklist before submitting your project to Moodle.
 
-- [ ] All pages have a meta description.
-- [ ] All pages have a valid title.
+- [done] All pages have a meta description.
+- [done] All pages have a valid title.
 - [ ] All pages import the correct css files.
 - [ ] All pages import the correct JS file.
 - [ ] Input fields have the following attributes;
