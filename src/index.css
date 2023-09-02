@@ -51,10 +51,11 @@ button {
   background-color: #F5F5F5;
   cursor: pointer;
   transition: border-color 0.25s;
+  min-height: 48px;
 }
 
 button:hover {
-  border-color: #8e8d8d;
+  border-color: #8e8e8e;
 }
 
 @media (prefers-color-scheme: light) {

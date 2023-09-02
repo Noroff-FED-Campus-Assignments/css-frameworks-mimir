@@ -3,7 +3,10 @@ import React, { useState, useEffect } from 'react';
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
 import logo from "../../assets/Y_logo.png";
+import logoWhite from "../../assets/Y_logo-white.png";
 import SignUpForm from "../sign-up_form";
+import google from "../../assets/icons/google-logo-48.svg";
+import apple from "../../assets/icons/apple-logo-48.svg";
 
 // Reusable Input and Button Components
 const Input = ({ type, placeholder, value, onChange, required, minLength }) => (
@@ -18,8 +21,9 @@ const Input = ({ type, placeholder, value, onChange, required, minLength }) => (
         aria-label={placeholder}
     />
 );
-const CustomButton = ({ label, onClick }) => (
-    <button onClick={onClick} className="bg-neutral-100 text-gray-900 px-4 py-2 rounded-3xl w-full my-2 border-2 border-[#F5F5F5] hover:border-white shadow-custom">
+const CustomButton = ({ label, onClick, icon }) => (
+    <button onClick={onClick} className="bg-neutral-100 text-gray-900 px-4 py-2 rounded-3xl w-full my-2 border-2 border-[#F5F5F5] hover:border-white dark:hover:bg-gray-100 dark:bg-gray-200 dark:border-gray-200 shadow-custom">
+        {icon && <img src={icon} alt={label} className="inline-block mr-2 w-7 h-7" />}
         {label}
     </button>
 );
@@ -75,6 +79,9 @@ function LoginForm() {
             <div className="flex justify-center items-center">
                 <img className={`h-22 sm:h-24 md:h-26 lg:h-28 xl:h-30 my-5 logo ${spin ? 'spin' : ''}`} src={logo}></img>
             </div>
+            {/*   <div className="flex justify-center items-center">
+                <img className={`h-22 sm:h-24 md:h-26 lg:h-28 xl:h-30 my-5 logo ${spin ? 'spin' : ''}`} src={logoWhite}></img>
+            </div> */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 mb-5"><p className="text-sm text-neutral-100 dark:text-gray-700">is</p>Better than X!</h1>
             {loginMutation.isLoading ? <Loading /> : null}
             {loginMutation.isError ? <ErrorMessage message={loginMutation.error.message} /> : null}
@@ -82,13 +89,13 @@ function LoginForm() {
 
             {activeForm === 'login' ? (!showLogin ? (
                 <>
-                    <div className="w-full dark:rounded-3xl dark:border-2 md:mt-0 sm:max-w-md p-4 dark:bg-gray-800 dark:border-gray-700">
-                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold my-2">Sign up now</h2>
-                        <CustomButton label="Sign up with Google" onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
-                        <CustomButton label="Sign up with Apple" onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
+                    <div className="w-full dark:rounded-3xl dark:border-2 md:mt-0 sm:max-w-md p-4 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400">
+                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold my-2 dark:text-white">Sign up now</h2>
+                        <CustomButton label="Sign up with Google" icon={google} onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
+                        <CustomButton label="Sign up with Apple" icon={apple} onClick={() => loginMutation.mutate({ username: "kminchelle", password: "0lelplR" })} />
                         <p className="text-center font-bold">or</p>
-                        <button onClick={() => setActiveForm('signup')} className="bg-orange-200 text-gray-900 px-4 py-2 rounded-3xl w-full mt-2 mb-5 border-2 border-orange-200 hover:border-orange-100 shadow-custom">Create an Account</button>
-                        <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold my-2">Already have an account?</h3>
+                        <button onClick={() => setActiveForm('signup')} className="bg-orange-200 dark:bg-blue-500 dark:text-white dark:border-blue-500 dark:hover:border-blue-400  text-gray-900 px-4 py-2 rounded-3xl w-full mt-2 mb-5 border-2 border-orange-200 hover:border-orange-100 shadow-custom">Create an Account</button>
+                        <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold my-2">Already have an account?</h3>
                         <CustomButton label="Sign In" onClick={() => setShowLogin(true)} />
                     </div>
                 </>
@@ -100,8 +107,8 @@ function LoginForm() {
                                 Sign in to your account
                             </h2>
                             <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6" action="/profile">
-                                <Input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required={true} />
-                                <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required={true} minLength={4} />
+                                <Input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required={true} autoComplete="email" />
+                                <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required={true} minLength={4} autoComplete="current-password" />
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-start">
                                         <div className="flex items-center h-5">
