@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
 import logo from "../../assets/Y_logo.png";
-import logoWhite from "../../assets/Y_logo-white.png";
 import SignUpForm from "../sign-up_form";
 import google from "../../assets/icons/google-logo-48.svg";
 import apple from "../../assets/icons/apple-logo-48.svg";
@@ -30,22 +29,22 @@ const CustomButton = ({ label, onClick, icon }) => (
 
 // Loading, Error, and Success Messages
 const Loading = () => (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-        <div className="text-white text-xl font-bold bg-transparent">
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50">
+        <div className="text-white text-2xl font-bold bg-transparent">
             Verifying...
         </div>
     </div>
 );
 const ErrorMessage = ({ message }) => (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-        <div className="text-white text-xl font-bold bg-transparent">
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50">
+        <div className="text-white text-2xl font-bold bg-transparent">
             An error occurred: {message}
         </div>
     </div>
 );
 const SuccessMessage = () => (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-        <div className="text-white text-xl font-bold bg-transparent">
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50">
+        <div className="text-white text-2xl font-bold bg-transparent">
             Login Successful...
         </div>
     </div>
@@ -77,11 +76,8 @@ function LoginForm() {
     return (
         <div className="red-100 dark:bg-gray-900 p-4 md:p-10 rounded-lg">
             <div className="flex justify-center items-center">
-                <img className={`h-22 sm:h-24 md:h-26 lg:h-28 xl:h-30 my-5 logo ${spin ? 'spin' : ''}`} src={logo}></img>
+                <img className={`h-22 sm:h-24 md:h-26 lg:h-28 xl:h-30 my-5 logo dark:invert ${spin ? 'spin' : ''}`} src={logo}></img>
             </div>
-            {/*   <div className="flex justify-center items-center">
-                <img className={`h-22 sm:h-24 md:h-26 lg:h-28 xl:h-30 my-5 logo ${spin ? 'spin' : ''}`} src={logoWhite}></img>
-            </div> */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 mb-5"><p className="text-sm text-neutral-100 dark:text-gray-700">is</p>Better than X!</h1>
             {loginMutation.isLoading ? <Loading /> : null}
             {loginMutation.isError ? <ErrorMessage message={loginMutation.error.message} /> : null}
