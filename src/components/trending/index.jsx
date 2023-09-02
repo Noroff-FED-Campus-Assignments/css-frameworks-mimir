@@ -2,7 +2,7 @@ import React from "react";
 
 function TrendingSection() {
   return (
-    <div className="bg-white p-4 shadow-custom rounded-3xl border-2 border-black ms-10">
+    <div className="bg-white p-4 shadow-custom rounded-3xl border-2 border-black">
       {/* Trending Title */}
       <h1 className="text-2xl font-bold text-black">Trending</h1>
 

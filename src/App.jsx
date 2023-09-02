@@ -10,7 +10,7 @@ function App() {
       </main>
 
       <footer>
-        <small className="text-red-500">Created with ❤️ by _REPLACE_</small>
+        <small className="text-red-400">Created with ❤️ by team Mimir</small>
       </footer>
     </>
   );
