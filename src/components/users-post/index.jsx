@@ -29,7 +29,7 @@ function PostSubmission() {
         </div>
 
         {/* Post Button */}
-        <button className="bg-yellow-200 px-12 py-2 ms-12 rounded-3xl border-2 border-black hover:bg-yellow-400">
+        <button className="bg-orange-200 dark:bg-blue-500 dark:text-white dark:border-blue-500 dark:hover:border-blue-400  text-gray-900 px-12 py-2 rounded-3xl ms-12 border-2 border-orange-200 hover:border-orange-100 shadow-custom leading-tight tracking-tight">
           Post
         </button>
       </div>
