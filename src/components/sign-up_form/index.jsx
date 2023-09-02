@@ -59,9 +59,9 @@ const SignUpForm = ({ setShowLogin, setActiveForm }) => {
             </div>
             {showModal && (
                 <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-                    <div className="modal-content bg-white rounded-lg p-6">
+                    <div className="modal-content bg-neutral-100 border-2 border-orange-100 rounded-lg p-6">
                         <h2 className="text-2xl font-bold">Thank You!</h2>
-                        <p className="mt-2 text-lg">Welcome and thank you for signing up!</p>
+                        <p className="mt-2 text-base">Welcome and thank you for signing up!</p>
                     </div>
                 </div>
             )}
