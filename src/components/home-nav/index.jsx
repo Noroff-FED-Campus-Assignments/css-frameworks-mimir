@@ -13,21 +13,33 @@ function NavBar() {
       <ul className="space-y-6">
         <li className="flex items-center bg-orange-200 dark:bg-blue-500 dark:text-white dark:border-blue-500 dark:hover:border-blue-400  text-gray-900 p-2 w-full mt-auto rounded-3xl border-2 border-orange-200 hover:border-orange-100 shadow-custom leading-tight tracking-tigh">
           <img src={HomeIcon} alt="Home Icon" className="w-6 h-6 mr-2" />
-          <Link to="/" style={{ color: "black" }} className="hidden md:inline-block">
+          <Link
+            to="/"
+            style={{ color: "black" }}
+            className="hidden md:inline-block"
+          >
             Home
           </Link>
         </li>
         <li className="flex items-center p-2">
           <img src={UserIcon} alt="User Icon" className="w-6 h-6 mr-2" />
-          <Link to="/profile" style={{ color: "black" }} className="hidden md:inline-block">
+          <Link
+            to="/profile"
+            style={{ color: "black" }}
+            className="hidden md:inline-block"
+          >
             Profile
           </Link>
         </li>
         <li className="flex items-center p-2">
           <img src={MailIcon} alt="Mail Icon" className="w-6 h-6 mr-2" />
-          <a href="#" style={{ color: "black" }} className="hidden md:inline-block">
-  Messages
-</a>
+          <a
+            href="#"
+            style={{ color: "black" }}
+            className="hidden md:inline-block"
+          >
+            Messages
+          </a>
         </li>
         <li className="flex items-center p-2">
           <img
@@ -35,9 +47,13 @@ function NavBar() {
             alt="Bookmark Icon"
             className="w-6 h-6 mr-2"
           />
-          <a href="#" style={{ color: "black" }} className="hidden md:inline-block">
-  Bookmarks
-</a>
+          <a
+            href="#"
+            style={{ color: "black" }}
+            className="hidden md:inline-block"
+          >
+            Bookmarks
+          </a>
         </li>
         <li className="flex items-center p-2">
           <img
@@ -45,15 +61,23 @@ function NavBar() {
             alt="Community Icon"
             className="w-6 h-6 mr-2"
           />
-          <a href="#" style={{ color: "black" }} className="hidden md:inline-block">
-  Communities
-</a>
+          <a
+            href="#"
+            style={{ color: "black" }}
+            className="hidden md:inline-block"
+          >
+            Communities
+          </a>
         </li>
         <li className="flex items-center p-2">
           <img src={CogIcon} alt="Settings Icon" className="w-6 h-6 mr-2" />
-          <a href="#" style={{ color: "black" }} className="hidden md:inline-block">
-  Settings
-</a>
+          <a
+            href="#"
+            style={{ color: "black" }}
+            className="hidden md:inline-block"
+          >
+            Settings
+          </a>
         </li>
       </ul>
 
