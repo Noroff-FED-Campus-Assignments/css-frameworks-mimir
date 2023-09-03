@@ -89,20 +89,32 @@ function ProfilePage() {
             {/* Like, Comment, and Share Buttons */}
             <div className="flex justify-between mt-4">
               <button
-                className="text-indigo-600 hover:text-indigo-800"
-                style={{ backgroundColor: accentColor, color: "white" }}
+                className="bg-neutral-100 text-gray-900 leading-tight tracking-tight px-3 py-2 rounded-lg w-24 my-2 border-2 border-[#F5F5F5] hover:border-white dark:hover:bg-gray-100 dark:bg-gray-200 dark:border-gray-200 shadow-custom"
+                style={{
+                  backgroundColor: accentColor,
+                  color: "white",
+                  fontSize: "14px",
+                }}
               >
                 Like
               </button>
               <button
-                className="text-indigo-600 hover:text-indigo-800"
-                style={{ backgroundColor: accentColor, color: "white" }}
+                className="bg-neutral-100 text-gray-900 leading-tight tracking-tight px-3 py-2 rounded-lg w-24 my-2 border-2 border-[#F5F5F5] hover:border-white dark:hover:bg-gray-100 dark:bg-gray-200 dark:border-gray-200 shadow-custom"
+                style={{
+                  backgroundColor: accentColor,
+                  color: "white",
+                  fontSize: "14px",
+                }}
               >
                 Comment
               </button>
               <button
-                className="text-indigo-600 hover:text-indigo-800"
-                style={{ backgroundColor: accentColor, color: "white" }}
+                className="bg-neutral-100 text-gray-900 leading-tight tracking-tight px-3 py-2 rounded-lg w-24 my-2 border-2 border-[#F5F5F5] hover:border-white dark:hover:bg-gray-100 dark:bg-gray-200 dark:border-gray-200 shadow-custom"
+                style={{
+                  backgroundColor: accentColor,
+                  color: "white",
+                  fontSize: "14px",
+                }}
               >
                 Share
               </button>
