@@ -20,6 +20,7 @@ const InitialPage = () => {
         }, 3000);
     }, []);
 
+
     // Fetch User
     const { data: user, isLoading: userLoading, isError } = useQuery(
         ['user', userId],
