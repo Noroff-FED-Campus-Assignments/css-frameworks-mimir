@@ -12,7 +12,6 @@ const InitialPage = () => {
 
 
     useEffect(() => {
-        // Simulate a 3-second loading time before showing LoginPage
         setTimeout(() => {
             setIsLoading(false);
         }, 3000);
