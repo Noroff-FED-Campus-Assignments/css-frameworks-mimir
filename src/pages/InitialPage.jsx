@@ -5,8 +5,6 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchUser } from '../lib/my-api';
 import useMetaTags from "../hooks/useMetaTags";
 
-
-
 const InitialPage = () => {
     useMetaTags();
     const [isLoading, setIsLoading] = useState(true);
@@ -19,7 +17,6 @@ const InitialPage = () => {
             setIsLoading(false);
         }, 3000);
     }, []);
-
 
     // Fetch User
     const { data: user, isLoading: userLoading, isError } = useQuery(
