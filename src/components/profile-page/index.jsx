@@ -1,4 +1,3 @@
-import React from "react";
 import { useUser, useUsersPosts } from "../../lib/my-api";
 
 function ProfilePage() {
