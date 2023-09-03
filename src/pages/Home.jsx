@@ -6,13 +6,11 @@ import PostSubmission from "../components/users-post/index.jsx";
 import OtherPosts from "../components/posts/index.jsx";
 import TrendingSection from "../components/trending/index.jsx";
 import useMetaTags from "../hooks/useMetaTags";
-import MobileHomePage from "../components/mobile-home/index.jsx";
-import MobileNav from "../components/mobile-nav/index.jsx";
 
 function HomePage() {
   useMetaTags("Home", "Welcome to our homepage.");
   return (
-    <div className="mt-4">
+    <div className="m-4">
       {/* Header with margin-bottom */}
       <Header />
 
@@ -24,7 +22,7 @@ function HomePage() {
         </div>
 
         {/* Middle */}
-        <div className="mx-6" style={{ overflowY: "auto", flexGrow: 1 }}>
+        <div className="mx-6">
           <PostSubmission />
           <OtherPosts />
         </div>
