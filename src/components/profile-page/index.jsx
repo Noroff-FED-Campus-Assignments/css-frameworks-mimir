@@ -1,5 +1,5 @@
 import React from "react";
-import { useUser, useUsersPosts } from "../../lib/my-api"; // Import your custom API hooks
+import { useUser, useUsersPosts } from "../../lib/my-api";
 
 function ProfilePage() {
   const userId = 4;
@@ -56,7 +56,7 @@ function ProfilePage() {
         {/* Bio */}
         <div className="px-6 py-4">
           <h2 className="text-xl font-semibold text-gray-800">Bio</h2>
-          <p className="text-gray-600">{userData.bio}</p>
+          <p className="text-gray-600">{userData.bio}I DANCE FOR MONEY</p>
         </div>
       </div>
 
@@ -66,17 +66,17 @@ function ProfilePage() {
         {postsData.posts.map((post) => (
           <div
             key={post.id}
-            className="bg-white rounded-lg shadow-md p-4 mt-4 transition-transform hover:scale-105"
+            className="bg-white rounded-lg shadow-md p-4 mt-4 transition-transform"
           >
             {/* User Avatar */}
             <div className="flex items-center">
               <img
                 src={userData.image}
                 alt="Avatar"
-                className="w-11 h-11 object-cover border-2 border-indigo-600"
+                className="w-11 h-11 object-cover border-2 border-indigo-600 hover:scale-105"
               />
               <div className="ml-2">
-                <h3 className="text-lg font-semibold text-indigo-600">
+                <h3 className="text-lg font-semibold text-indigo-600 hover:scale-105">
                   {userData.firstName} {userData.lastName}
                 </h3>
                 <p className="text-gray-600">@{userData.username}</p>
@@ -84,7 +84,7 @@ function ProfilePage() {
             </div>
             {/* Post Content */}
             <div className="mt-2">
-              <p className="text-gray-800">{post.body}</p>
+              <p className="text-gray-800 ">{post.body}</p>
             </div>
             {/* Like, Comment, and Share Buttons */}
             <div className="flex justify-between mt-4">
