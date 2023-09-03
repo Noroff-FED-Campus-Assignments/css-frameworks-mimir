@@ -6,7 +6,7 @@ import { fetchUser } from '../lib/my-api';
 
 const InitialPage = () => {
     const [isLoading, setIsLoading] = useState(true);
-    const userId = 4;
+    const userId = null;
 
     const { data: user, isLoading: userLoading, isError } = useQuery(['user', userId], () => fetchUser(userId), {
         enabled: !!userId,
