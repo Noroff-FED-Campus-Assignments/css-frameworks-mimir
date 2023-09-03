@@ -1,5 +1,5 @@
 // import ExampleUsersPosts from "../components/example-users-posts"; //
-import { Outlet, Link } from "@tanstack/react-router"
+import { Outlet, Link } from "@tanstack/react-router";
 import Header from "../components/header/index.jsx";
 import NavBar from "../components/home-nav/index.jsx";
 import PostSubmission from "../components/users-post/index.jsx";
@@ -10,7 +10,7 @@ import useMetaTags from "../hooks/useMetaTags";
 function HomePage() {
   useMetaTags("Home", "Welcome to our homepage.");
   return (
-    <div className="mt-4">
+    <div className="m-4">
       {/* Header with margin-bottom */}
       <Header />
 
@@ -22,7 +22,7 @@ function HomePage() {
         </div>
 
         {/* Middle */}
-        <div className="mx-6" style={{ overflowY: "auto", flexGrow: 1 }}>
+        <div className="mx-6">
           <PostSubmission />
           <OtherPosts />
         </div>
@@ -36,7 +36,4 @@ function HomePage() {
   );
 }
 
-
 export default HomePage;
-
-

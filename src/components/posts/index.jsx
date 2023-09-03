@@ -3,7 +3,7 @@ import UserIcon from "../../assets/icons/user.svg";
 
 function OtherPosts() {
   return (
-    <div className="bg-yellow-200 p-4 rounded-3xl border-2 shadow-custom border-black">
+    <div className="bg-orange-200 p-4 rounded-3xl border-2 shadow-custom border-black">
       <h1 className="text-2xl font-bold text-black mb-4 text-left">Posts</h1>
       <div className="bg-white p-4 shadow-custom rounded-3xl border-2 border-black">
         {/* Post Content */}
