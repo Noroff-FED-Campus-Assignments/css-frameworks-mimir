@@ -1,5 +1,4 @@
-import React from "react";
-import { useUser, useUsersPosts } from "../../lib/my-api"; // Import your custom API hooks
+import { useUser, useUsersPosts } from "../../lib/my-api";
 
 function ProfilePage() {
   const userId = 4;
@@ -56,7 +55,7 @@ function ProfilePage() {
         {/* Bio */}
         <div className="px-6 py-4">
           <h2 className="text-xl font-semibold text-gray-800">Bio</h2>
-          <p className="text-gray-600">{userData.bio}</p>
+          <p className="text-gray-600">{userData.bio}I DANCE FOR MONEY</p>
         </div>
       </div>
 
@@ -66,17 +65,17 @@ function ProfilePage() {
         {postsData.posts.map((post) => (
           <div
             key={post.id}
-            className="bg-white rounded-lg shadow-md p-4 mt-4 transition-transform hover:scale-105"
+            className="bg-white rounded-lg shadow-md p-4 mt-4 transition-transform"
           >
             {/* User Avatar */}
             <div className="flex items-center">
               <img
                 src={userData.image}
                 alt="Avatar"
-                className="w-11 h-11 object-cover border-2 border-indigo-600"
+                className="w-11 h-11 object-cover border-2 border-indigo-600 hover:scale-105"
               />
               <div className="ml-2">
-                <h3 className="text-lg font-semibold text-indigo-600">
+                <h3 className="text-lg font-semibold text-indigo-600 hover:scale-105">
                   {userData.firstName} {userData.lastName}
                 </h3>
                 <p className="text-gray-600">@{userData.username}</p>
@@ -84,25 +83,37 @@ function ProfilePage() {
             </div>
             {/* Post Content */}
             <div className="mt-2">
-              <p className="text-gray-800">{post.body}</p>
+              <p className="text-gray-800 ">{post.body}</p>
             </div>
             {/* Like, Comment, and Share Buttons */}
             <div className="flex justify-between mt-4">
               <button
-                className="text-indigo-600 hover:text-indigo-800"
-                style={{ backgroundColor: accentColor, color: "white" }}
+                className="bg-neutral-100 text-gray-900 leading-tight tracking-tight px-3 py-2 rounded-lg w-24 my-2 border-2 border-[#F5F5F5] hover:border-white dark:hover:bg-gray-100 dark:bg-gray-200 dark:border-gray-200 shadow-custom"
+                style={{
+                  backgroundColor: accentColor,
+                  color: "white",
+                  fontSize: "14px",
+                }}
               >
                 Like
               </button>
               <button
-                className="text-indigo-600 hover:text-indigo-800"
-                style={{ backgroundColor: accentColor, color: "white" }}
+                className="bg-neutral-100 text-gray-900 leading-tight tracking-tight px-3 py-2 rounded-lg w-24 my-2 border-2 border-[#F5F5F5] hover:border-white dark:hover:bg-gray-100 dark:bg-gray-200 dark:border-gray-200 shadow-custom"
+                style={{
+                  backgroundColor: accentColor,
+                  color: "white",
+                  fontSize: "14px",
+                }}
               >
                 Comment
               </button>
               <button
-                className="text-indigo-600 hover:text-indigo-800"
-                style={{ backgroundColor: accentColor, color: "white" }}
+                className="bg-neutral-100 text-gray-900 leading-tight tracking-tight px-3 py-2 rounded-lg w-24 my-2 border-2 border-[#F5F5F5] hover:border-white dark:hover:bg-gray-100 dark:bg-gray-200 dark:border-gray-200 shadow-custom"
+                style={{
+                  backgroundColor: accentColor,
+                  color: "white",
+                  fontSize: "14px",
+                }}
               >
                 Share
               </button>
