@@ -28,7 +28,7 @@ function ProfilePage() {
   const accentColor = "#F4D196";
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-orange-200 p-4 rounded-3xl border-2 shadow-custom border-black ">
       {/* Profile Section */}
       <div className="bg-white rounded-lg overflow-hidden shadow-lg">
         {/* Profile Banner */}
@@ -57,15 +57,44 @@ function ProfilePage() {
           <h2 className="text-xl font-semibold text-gray-800">Bio</h2>
           <p className="text-gray-600">{userData.bio}I DANCE FOR MONEY</p>
         </div>
+        
+      </div>
+      <div className="bg-white w-full mt-2 text-xl p-4 mb-8 shadow-custom rounded-3xl border-2 border-black">
+      <div className="flex items-start space-x-4">
+        
+        <img className="w-10 h-10 rounded-full" />
+
+     
+        <div className="flex-grow">
+          <textarea
+            placeholder="What's happening?"
+            className="w-full h-20 resize-none border border-gray-300 p-2 rounded-md focus:outline-none"
+          ></textarea>
+        </div>
       </div>
 
+      <div className="flex items-center justify-between mt-2 ms-14">
+        
+      <button
+                className="bg-neutral-100 text-gray-900 leading-tight tracking-tight px-3 py-2 rounded-lg w-24 my-2 border-2 border-[#F5F5F5] hover:border-white dark:hover:bg-gray-100 dark:bg-gray-200 dark:border-gray-200 shadow-custom"
+                style={{
+                  backgroundColor: accentColor,
+                  color: "white",
+                  fontSize: "14px",
+                }}
+              >
+          Post
+        </button>
+      </div>
+    </div>
+
       {/* Posts Section */}
-      <div className="mt-6">
-        <h1 className="text-2xl font-semibold text-white-800 ">POSTS</h1>
+      <div className="bg-orange-200 p-4 mt-20 rounded-3xl border-2 shadow-custom border-black">
+        <h1 className="text-4xl font-bold text-black mb-4 text-left">posts</h1>
         {postsData.posts.map((post) => (
           <div
             key={post.id}
-            className="bg-white rounded-lg shadow-md p-4 mt-4 transition-transform"
+            className="bg-white p-4 shadow-custom rounded-3xl border-2 border-black mb-4"
           >
             {/* User Avatar */}
             <div className="flex items-center">
