@@ -29,7 +29,7 @@ function ProfilePage() {
   const accentColor = "#F4D196";
 
   return (
-    <div>
+    <div className="w-full">
       {/* Profile Section */}
       <div className="bg-white rounded-lg overflow-hidden shadow-lg">
         {/* Profile Banner */}
