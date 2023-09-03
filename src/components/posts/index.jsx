@@ -3,9 +3,9 @@ import UserIcon from "../../assets/icons/user.svg";
 
 function OtherPosts() {
   return (
-    <div className="bg-orange-200 p-4 rounded-3xl border-2 shadow-custom border-black">
-      <h1 className="text-2xl font-bold text-black mb-4 text-left">Posts</h1>
-      <div className="bg-white p-4 shadow-custom rounded-3xl border-2 border-black">
+    <div className="bg-orange-200 p-4 rounded-3xl border-2 border-orange-100 dark:bg-gray-800 dark:border-gray-700">
+      <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-4 text-left">Posts</h1>
+      <div className="bg-neutral-100 p-4 rounded-3xl border-2 border-white dark:bg-gray-700 dark:border-gray-600">
         {/* Post Content */}
         <div className="flex items-start">
           {/* Content Text */}

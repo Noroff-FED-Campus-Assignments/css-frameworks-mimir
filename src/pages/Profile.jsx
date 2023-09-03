@@ -18,7 +18,7 @@ function ProfilePage() {
             <NavBar />
           </div>
           {/* Middle */}
-          <div className="mx-6" style={{ overflowY: "auto", flexGrow: 1 }}>
+          <div className="mx-1" style={{ overflowY: "auto", flexGrow: 1 }}>
             <Profile />
           </div>
           {/* Right Side */}

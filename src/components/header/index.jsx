@@ -4,10 +4,10 @@ import user from "../../assets/basic-user.svg";
 
 function Header() {
   return (
-    <header className="bg-white p-4 shadow-custom rounded-3xl border-2 border-black flex justify-between items-center mb-6">
+    <header className="bg-neutral-100 text-gray-900 p-4  rounded-3xl border-2 border-white dark:bg-gray-700 dark:border-gray-600 flex justify-between items-center mb-1">
       {/* Left side - Logo */}
       <div>
-        <img src={logo} alt="Logo" className="w-20 h-20" />
+        <img src={logo} alt="Logo" className="w-20 h-20 logo dark:invert" />
       </div>
 
       {/* Middle - Search Bar (hidden on mobile) */}
@@ -15,7 +15,7 @@ function Header() {
         <input
           type="text"
           placeholder="Search anything.."
-          className="w-full p-2 rounded-full border-2 border-black focus:outline-none"
+          className="w-full p-2 rounded-full border-2 bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:text-white dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
         />
       </div>
 

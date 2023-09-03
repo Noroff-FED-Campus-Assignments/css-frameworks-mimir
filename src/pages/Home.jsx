@@ -10,7 +10,7 @@ import useMetaTags from "../hooks/useMetaTags";
 function HomePage() {
   useMetaTags("Home", "Welcome to our homepage.");
   return (
-    <div className="m-4">
+    <div className="m-2">
       {/* Header with margin-bottom */}
       <Header />
 
@@ -22,7 +22,7 @@ function HomePage() {
         </div>
 
         {/* Middle */}
-        <div className="mx-6">
+        <div className="mx-1">
           <PostSubmission />
           <OtherPosts />
         </div>
