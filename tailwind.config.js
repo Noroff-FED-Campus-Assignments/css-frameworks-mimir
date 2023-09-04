@@ -4,7 +4,10 @@ export default {
   theme: {
     extend: {
       screens: {
-        xl: "1440px",
+        xxs: "440px",
+      },
+      minWidth: {
+        80: "80px",
       },
       height: {
         22: "5.5rem",
