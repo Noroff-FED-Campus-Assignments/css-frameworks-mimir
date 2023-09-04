@@ -83,7 +83,7 @@ function ProfilePage() {
                   className="w-10 h-10 rounded-full object-cover border-2 border-indigo-600 hover:scale-105"
                 />
                 <div className="ml-2">
-                  <h3 className="text-sm text-gray-600 dark:text-white hover:scale-105">
+                  <h3 className="text-sm text-gray-600 dark:text-white hover:scale-105 hidden xxs:inline-block">
                     {userData.firstName} {userData.lastName}
                   </h3>
                   <p className="text-sm text-black dark:text-white">@{userData.username}</p>
