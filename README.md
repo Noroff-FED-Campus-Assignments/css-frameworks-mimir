@@ -27,7 +27,48 @@ YOu can update your deployment pipeline by editing the [vercel.json](https://ver
 
 ## Report
 
-_ADD_YOUR_REPORT_HERE_
+Project Report: Y - A Social Media Website
+
+ 
+
+Project Overview:
+
+Our team, consisting of Petter, Khadar, and Christian. We have developed "Y," a new social media platform inspired by X (twitter). We used React and Tailwind to create a user-friendly and a visual distinct platform. 
+
+ 
+
+Key Features:
+
+Home Page (Petter - Team Lead):
+
+Petter designed the home page, focusing on user experience.
+
+It includes a header with a search bar, a trending bar, a feed of posts from the user’s contacts and a form to create a new post.
+
+Profile Page (Khadar):
+
+Khadar crafted an intuitive profile page, allowing users to showcase their information and posts.
+
+Login Page (Christian):
+
+Christian implemented a secure and user-friendly login page with authentication mechanisms. 
+
+ 
+
+We wanted a unique social media platform that felt friendly and appealing, yet new and exciting. So we settled for muted yellow and orange colours combined with grey and white.
+
+ 
+
+Challenges: 
+
+Most of the challenges came from figuring out how to work together on Github and learning about branches and staging. But once we figured that out it went very smoothly. We quickly decided on what kind of a design we wanted and worked fast to get it finished in Figma. Coding took some time getting used to React and Tailwind but we helped each other out when needed and after a while we started to like Tailwind. 
+
+ 
+
+Conclusion:
+
+A fun project that helped us understand the basics of react and implementing a CSS framework. Collaborating in a group setting gave us valuable insights into our individual strengths and areas for improvement. We look forward to building on this experience in future projects.
+
 
 ## Getting Started
 
