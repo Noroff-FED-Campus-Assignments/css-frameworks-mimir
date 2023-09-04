@@ -74,7 +74,7 @@ function LoginForm() {
     };
 
     return (
-        <div className="red-100 dark:bg-gray-900 p-4 md:p-10 rounded-lg">
+        <div className=" dark:bg-gray-900 p-4 md:p-10 rounded-lg">
             <div className="flex justify-center items-center">
                 <img className={`h-22 sm:h-24 md:h-26 lg:h-28 xl:h-30 my-5 logo dark:invert ${spin ? 'spin' : ''}`} src={logo}></img>
             </div>
