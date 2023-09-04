@@ -8,21 +8,21 @@ function ProfilePage() {
   useMetaTags("Profile", "Your user profile details.");
   return (
     <>
-      <div className="mt-4">
-        {/* Header with margin-bottom */}
+      <div className="mt-2 mx-2 w-full">
+        {/* Header*/}
         <Header />
         {/* Main Content */}
         <div className="flex">
           {/* Left Side */}
-          <div>
+          <div className="min-w-80 sm:w-2/12 md:w-3/12">
             <NavBar />
           </div>
           {/* Middle */}
-          <div className="mx-6" style={{ overflowY: "auto", flexGrow: 1 }}>
+          <div className="w-full sm:w-10/12 md:w-7/12 mx-1">
             <Profile />
           </div>
           {/* Right Side */}
-          <div>
+          <div className="w-0 sm:w-0 md:w-2/12">
             <TrendingSection />
           </div>
         </div>
