@@ -9,6 +9,9 @@ const rootRoute = new RootRoute({
   component: Root,
 });
 
+/** InitialPage for direction of user to login if not logged in and to home if logged in
+ * @author Cnbergh
+ */
 const indexRoute = new Route({
   getParentRoute: () => rootRoute,
   path: "/",

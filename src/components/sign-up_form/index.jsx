@@ -4,7 +4,7 @@ import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
 
 
-
+/** *Sign up form - login page - @author Cnbergh*/
 const Input = ({ type, placeholder, value, onChange }) => (
     <input
         type={type}

@@ -1,5 +1,8 @@
 import { useEffect } from 'react';
-
+/** 
+ * *Change of site title 
+ * @author Cnbergh
+ */
 const useMetaTags = (title, description) => {
     useEffect(() => {
         // title + our App Name

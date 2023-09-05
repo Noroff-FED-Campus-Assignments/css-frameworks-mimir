@@ -7,7 +7,9 @@ import SignUpForm from "../sign-up_form";
 import google from "../../assets/icons/google-logo-48.svg";
 import apple from "../../assets/icons/apple-logo-48.svg";
 
-// Reusable Input and Button Components
+/** *Reusable Input and Button Components 
+ * @author Cnbergh*/
+
 const Input = ({ type, placeholder, value, onChange, required, minLength }) => (
     <input
         type={type}
@@ -27,7 +29,9 @@ const CustomButton = ({ label, onClick, icon }) => (
     </button>
 );
 
-// Loading, Error, and Success Messages
+/** *Loading, Error, and Success Messages 
+ * @author Cnbergh
+*/
 const Loading = () => (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50">
         <div className="text-white text-2xl font-bold bg-transparent">
@@ -50,7 +54,9 @@ const SuccessMessage = () => (
     </div>
 );
 
-// Login form App
+/** *Login-form App
+ * @author Cnbergh
+ */
 function LoginForm() {
     const [activeForm, setActiveForm] = useState('login');
     const [showLogin, setShowLogin] = useState(false);

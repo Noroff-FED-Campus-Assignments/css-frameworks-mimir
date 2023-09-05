@@ -5,6 +5,10 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchUser } from '../lib/my-api';
 import useMetaTags from "../hooks/useMetaTags";
 
+/** InitialPage - Option to start site at loading if user not logged in. Change use state "4" line 13 
+ * @author Cnbergh
+*/
+
 const InitialPage = () => {
     useMetaTags();
     const [isLoading, setIsLoading] = useState(true);

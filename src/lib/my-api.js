@@ -71,7 +71,10 @@ export function useLogin(username, password) {
   });
 }
 
-// New user SignUp
+/**
+ * *New user SignUp
+ * @author Cnbergh
+ */
 export async function signUp({ email, password }) {
   try {
     const response = await axios.post(`${BASE_URL}/auth/signup`, {
