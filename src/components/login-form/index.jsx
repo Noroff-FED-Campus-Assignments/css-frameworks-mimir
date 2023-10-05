@@ -1,5 +1,5 @@
 import { login } from "../../lib/my-api";
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
 import logo from "../../assets/Y_logo.png";
@@ -80,7 +80,7 @@ function LoginForm() {
     };
 
     return (
-        <div className="p-4 rounded-lg  dark:bg-gray-900 md:p-10">
+        <div className="p-4 rounded-lg dark:bg-gray-900 md:p-10">
             <div className="flex items-center justify-center">
                 <img className={`h-22 sm:h-24 md:h-26 lg:h-28 xl:h-30 my-5 logo dark:invert ${spin ? 'spin' : ''}`} src={logo}></img>
             </div>
