@@ -1,5 +1,12 @@
 import React from "react";
 
+/**
+ *
+ * @component
+ * @returns {JSX.Element}
+ * @author PetterMartin
+ */
+
 function TrendingSection() {
   return (
     <div className="hidden h-full w-full md:block bg-neutral-100 text-gray-900 dark:text-white border-white dark:bg-gray-800 dark:border-gray-700 p-4 rounded-3xl border-2 ">
